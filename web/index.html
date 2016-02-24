@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="desktop wow-animation">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="Author" content="YY" />
+    <meta name="Copyright" content="YY" />
+	<title>demo</title>
+
+	<!-- Local css reset -->
+	<link href="public/css/normalize.css" rel="stylesheet" type="text/css">
+
+	<link href="public/css/common.css" rel="stylesheet" type="text/css">
+	<link href="public/css/index.css" rel="stylesheet" type="text/css">
+	<link href="public/css/rb-navbar.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+	.fixed-bg {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: url('public/img/home-gallery-1.jpg');
+		z-index: -1;
+
+		-webkit-background-size: cover;
+		-o-background-size: cover;
+		-moz-background-size: cover;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	.fixed-layer {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+
+		background: -moz-linear-gradient(top, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 30%, rgba(151, 132, 104, 0.7) 100%);
+		/* FF3.6-15 */
+		background: -webkit-linear-gradient(top, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 30%, rgba(151, 132, 104, 0.7) 100%);
+		/* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 30%, rgba(151, 132, 104, 0.7) 100%);
+		/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000204', endColorstr='#b3978468',GradientType=0 );
+		/* IE6-9 */
+	}
+
+	.content {
+		position: relative;
+		overflow: visible;
+		color: #fff;
+		background: #fff;
+	}
+
+	.content div, .content p {
+		line-height: 5;
+	}
+	</style>
+</head>
+
+<body>
+	<section>
+		<div class="fixed-bg"></div>
+		<div class="fixed-layer"></div>
+	</section>
+
+	<header>
+		<div class="navbar text-center">
+			<ul class="navbar-nav">
+				<li class="active">
+					<a href="javascript:;">首&nbsp;&nbsp;&nbsp;&nbsp;页</a>
+				</li>
+				<li>
+					<a href="javascript:;">关于鼎鑫</a>
+				</li>
+				<li>
+					<a href="javascript:;">装修案例</a>
+				</li>
+				<li>
+					<a href="javascript:;">联系我们</a>
+				</li>
+			</ul>
+		</div>
+
+		<section class="brand text-center">
+			<div>
+				<a href="javascript:;">
+	                <div class="brand_logo">
+	                    <span class="fa fa-star-o"></span>
+	                    <span class="fa fa-star-o"></span>
+	                    <span class="fa fa-star-o"></span>
+	                    <span class="fa fa-star-o"></span>
+	                </div>
+	                <div class="brand_name">
+	                	<big>鼎&nbsp;&nbsp;鑫&nbsp;&nbsp;</big>设&nbsp;&nbsp;计&nbsp;&nbsp;<big>装&nbsp;&nbsp;饰</big>
+	                </div>
+	                <div class="brand_slogan">DingXin Design & Decorate | <span class="copyright-year"></span></div>
+	            </a>
+			</div>
+
+			<a href="javascript:;" class="hint-aspiration">
+                <ul>
+                	<li>品</li>
+                	<li>质</li>
+                	<li>设</li>
+                	<li>计</li>
+                	&nbsp;&nbsp;
+                	<li>服</li>
+                	<li>务</li>
+                	<li>至</li>
+                	<li>上</li>
+                </ul>
+            	<!-- 品质设计&nbsp;&nbsp;服务至上 -->
+            </a>
+		</section>
+	</header>
+
+	<section class="content">
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+		<div>1</div>
+	</section>
+
+	<script src="public/js/core.min.js"></script>
+	<script src="public/js/rb-script.js"></script>
+    <script type="text/javascript">
+    var hintAspirationUlLi = $('.hint-aspiration ul li');
+    hintAspirationUlLi.each(function() {
+    	var totalTime = 'hint-aspiration 4s linear infinite';
+    	var index = arguments[0];
+    	var delay = (index * 0.15) + 's';
+		$(this).css({
+			'animation': totalTime,
+			'-moz-animation': totalTime,	/* Firefox */
+			'-webkit-animation': totalTime,	/* Safari 和 Chrome */
+			'-o-animation': totalTime,	/* Opera */
+			
+			'-webkit-animation-delay': delay,
+			'-moz-animation-delay': delay,
+			'-o-animation-delay': delay,
+			'-ms-animation-delay': delay, 
+			'animation-delay': delay,
+			
+		});
+    });
+    </script>
+</body>
+</html>
