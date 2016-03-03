@@ -1,0 +1,534 @@
+@charset "UTF-8";
+
+/**
+ * 主页的一些样式
+ */
+ 
+body, html {
+	height: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+a, button, input {
+    transition: .3s all ease;
+}
+
+a, a[href^="tel:"], a[href^="callto:"] {
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+ul, li {
+    list-style-type:none;
+}
+
+/**
+ * common
+ */
+body {
+    background: #fff;
+    /*font-family: "Microsoft YaHei";*/
+    font-family: "Microsoft Yahei", Helvetica, Arial, Verdana, sans-serif;
+    color: #9c9c9c;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/**************************************/
+/*自定义的样式*/
+/**************************************/
+
+/*==========================*/
+/*布局方面*/
+.fixed-width, .fixed-width-small {
+    max-width: 400px;
+}
+
+@media (min-width: 480px) {
+    .fixed-width, .fixed-width-small {
+        max-width: 480px;
+    }
+}
+
+@media (min-width: 768px) {
+    .fixed-width {
+        max-width: 740px;
+    }
+    .fixed-width-small {
+        max-width: 650px;
+    }
+}
+
+@media (min-width: 992px) {
+    .fixed-width {
+        max-width: 960px;
+    }
+}
+
+.tansparent {
+    background: rgba(0,0,0,0);
+    background-color: transparent;
+}
+
+.page {
+    height: 100%;
+    overflow: visible;
+}
+
+.clip {
+    overflow: hidden;
+}
+
+.center-in-wrap {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.cl-margin {
+    margin:0px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-normal {
+    font-weight:normal;
+}
+
+.text-bold {
+    font-weight:bold;
+}
+
+/**
+ * common text color
+ */
+.tc-normal {
+    color: #9c9c9c;
+}
+
+.tc-inverse {
+    color:#fff;
+}
+
+.highlight {
+    color:#292828;
+}
+
+.hover {
+    color:#ccbc8b;
+}
+
+a:hover, a.highlight:hover, .highlight a:hover {
+    color: #ccbc8b;
+}
+
+.bg-cover {
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+    background-position: center center;
+}
+
+
+/**************************************/
+/*每个页面都可能用到的样式*/
+/**************************************/
+
+/*=============================*/
+/*nav bar*/
+.navbar {
+	transition: .3s background ease;
+}
+
+.navbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: 75px;
+	color: #fff;
+}
+
+.navbar-nav {
+}
+
+.navbar-nav > li {
+    font-weight: 700;
+    font-size: 18px;
+    line-height:20px;
+	color: #fff;
+	text-transform: none;
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.navbar-nav > li > a {
+	display: block;
+	padding: 16px 32px;
+	border: 1px solid transparent;
+	position: relative;
+	z-index: 2;
+	letter-spacing: 5px;
+}
+
+.navbar-nav > li > a:hover, .navbar-nav > li.active > a {
+	border: 1px solid #fff;
+    color: #fff;
+}
+
+.navbar.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: 0px;
+	z-index: 999;
+	background: #292828;
+	padding: 10px 0;
+}
+
+
+
+/*=============================*/
+/*正文主体内容*/
+.content, footer, main {
+    position: relative;
+}
+
+.content {
+    overflow: visible;
+    background: #fff;
+}
+
+.content.tansparent {
+    background: rgba(0,0,0,0);
+    background-color: transparent;
+}
+
+.home-vline {
+    content:"";
+    position: absolute;
+    background: #ccbc8b;
+    width: 1px;
+    left: 50%;
+    right: 50%;
+}
+
+main {
+    margin-left:auto;
+    margin-right:auto;
+    padding:75px 0px;
+}
+
+main h1, main h2, main h3 {
+    color:#292828;
+}
+
+.content-img {
+    max-width: 100%;
+    display: block;
+}
+
+.content main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content main .title {
+    font-size: 2em;
+}
+
+.content main .subtitle {
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.content main p {
+    line-height: 1.5;
+    text-indent: 2em;
+}
+
+.content p, .content-img {
+    margin-top:25px;
+}
+
+.content * + .subtitle {
+    margin-top: 45px;
+}
+
+.content-wrap { /*wrap a container for sub pages*/
+    position: absolute;
+    top: 350px;
+    left: 0;
+    right: 0;
+}
+
+/*=============================*/
+/*关于公司*/
+.about-pop {
+    position: absolute;
+    margin-top: 20px;
+    display: block;
+    z-index: 4;    
+    background: #fff;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.12), 3px 4px 8px 0px rgba(0, 0, 0, 0.11);
+}
+
+
+/*=============================*/
+/*底部*/
+footer .com-info {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+.footer-logo {
+    display: inline;
+    margin: 0;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.fixed-bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.fixed-layer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: -moz-linear-gradient(top, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 30%, rgba(151, 132, 104, 0.7) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 30%, rgba(151, 132, 104, 0.7) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 30%, rgba(151, 132, 104, 0.7) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000204', endColorstr='#b3978468', GradientType=0);
+    /* IE6-9 */
+}
+
+/*
+* @section      Icon Fonts
+* @description  This section holds all icon fonts stored in template
+*/
+/**
+ * @section      Font Awesome 4.5.0 by  -  - @fontawesome
+ * @author       @davegandy
+ * @see          http://fontawesome.io
+ * @license      Font: SIL OFL 1.1, CSS: MIT License 
+ */
+@font-face {
+	font-family: 'FontAwesome';
+	src: url("../fonts/fontawesome-webfont.eot");
+	src: url("../fonts/fontawesome-webfont.eot") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2") format("woff2"), url("../fonts/fontawesome-webfont.woff") format("woff"), url("../fonts/fontawesome-webfont.ttf") format("truetype"), url("../fonts/fontawesome-webfont.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.fa-lg {
+	font-size: 1.33333333em;
+	line-height: 0.75em;
+	vertical-align: -15%;
+}
+
+.fa-star-o:before {
+    content: "\f006";
+}
+
+.brand {
+    display: block;
+    color: #fff;
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 50px;
+}
+
+/*.brand.sub-page {*/
+/*    position: fixed;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*}*/
+
+.brand-area a {
+    display: inline-block;
+    -webkit-animation:twinkle-brand 5s ease infinite;
+       -moz-animation:twinkle-brand 5s ease infinite;
+         -o-animation:twinkle-brand 5s ease infinite;
+            animation:twinkle-brand 5s ease infinite;
+}
+
+.brand-area a:hover {
+    color:#ccbc8b;
+}
+
+@keyframes twinkle-brand {
+    0% { color:#fff; }
+    50% { color:#ccbc8b; }
+    100% { color:#fff; }
+}
+
+@-webkit-keyframes twinkle-brand {
+    0% { color:#fff; }
+    50% { color:#ccbc8b; }
+    100% { color:#fff; }
+}
+
+@-moz-keyframes twinkle-brand {
+    0% { color:#fff; }
+    50% { color:#ccbc8b; }
+    100% { color:#fff; }
+}
+
+@-o-keyframes twinkle-brand {
+    0% { color:#fff; }
+    50% { color:#ccbc8b; }
+    100% { color:#fff; }
+}
+
+.brand .brand_logo :nth-child(1), .brand .brand_logo :nth-child(4) {
+	margin-top: 30px;
+}
+
+.brand .brand_logo * {
+	padding: 15px;
+	vertical-align: top;
+}
+
+.brand .brand_logo span {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.brand .brand_name {
+    margin: 20px 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.brand .brand_name big {
+    font-size: 1.1em;
+}
+
+.brand-area {
+    margin-top: 0px;
+}
+
+@media (max-width: 768px) {
+	.brand-area {
+	    margin-top: 20px;
+	}
+}
+
+@media (min-width: 768px) {
+	.brand .brand_name {
+	    font-size: 50px;
+	}
+}
+
+@media (min-width: 992px) {
+	.brand .brand_name {
+	    font-size: 60px;
+	}
+}
+
+.brand .brand_slogan {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .brand .brand_slogan {
+        font-size: 24px;
+    }
+}
+
+.hint-aspiration {
+    display: inline-block;
+    background: transparent;
+    border-color: #ccbc8b;
+    border-width: 1px;
+    border-style: solid;
+    color: #ccbc8b;
+    font-weight: 400;
+    padding: 10px 21px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    line-height: 1.42;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s all ease;
+    margin-top: 4.878048780487805%;
+}
+
+.hint-aspiration ul, .hint-aspiration ul li {
+	display: inline-block;
+}
+
+@keyframes hint-aspiration {
+	0% {transform: scale(5); opacity: 0;}
+	12.5% {transform: scale(1); opacity: 1}
+	100% {transform: scale(1); opacity: 1}
+}
+
+@-moz-keyframes hint-aspiration { /* Firefox */
+	0% {-moz-transform: scale(5);}
+	12.5% {-moz-transform: scale(1);}
+	100% {-moz-transform: scale(1);}
+}
+
+@-webkit-keyframes hint-aspiration { /* Safari 和 Chrome */
+	0% {-webkit-transform: scale(5);}
+	12.5% {-webkit-transform: scale(1);}
+	100% {-webkit-transform: scale(1);}
+}
+
+@-o-keyframes hint-aspiration { /* Opera */
+	0% {-o-transform: scale(5);}
+	12.5% {-o-transform: scale(1);}
+	100% {-o-transform: scale(1);}
+}

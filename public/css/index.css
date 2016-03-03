@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+.home-block {
+    
+}
+
+.home-block + .home-block {
+    margin-top: 45px;
+}
+
+.home-block-title-wrap {
+    height: 56px;
+}
+
+.home-block-title-wrap div, .home-block-title-wrap:before, .home-block-title-wrap:after {
+    display: inline-block;
+}
+
+.home-block-title-wrap:before, .home-block-title-wrap:after {
+    content: "";
+    background: #ccbc8b;
+    position: relative;
+    width: 50px;
+    height: 1px;
+    margin: 35px 0 19px;
+}
+
+@media(min-width: 768px) {
+    .home-block-title-wrap:before, .home-block-title-wrap:after {
+        width: 100px;
+    }
+}
+
+.home-block-title {
+    color: #808080;
+    font-size: 1.45em;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.home-block-subtitle {
+    /*color: #808080;*/
+    /*color: #373a41;*/
+    font-size: .95em;
+    font-weight: normal;
+    color: #ccbc8b;
+}
+
+.home-block-title + .home-block-subtitle {
+    margin-top: 5px;
+}
+
+.home-block-content {
+    margin-top: 25px;
+}
+
+.home-block-canvas {
+    width: 100%;
+    overflow: hidden;
+}
+
+.home-block-canvas ul, .home-block-canvas > ul > li {
+    transition: .5s all linear;
+}
+
+.home-block-canvas > ul > li {
+    vertical-align: top;
+}
+/*end*/
+
+.case-preview, .case-overview {
+    width: 100%;
+    display: block;
+}
+
+.case-preview {
+    background: #484443;
+    padding: 10px;
+}
+
+.case-overview {
+    height: 450px;
+}
+
+@media (min-width: 768px) {
+    .case-preview, .case-overview {
+        display: inline-block;
+        height: 450px;
+    }
+    .case-preview {
+        width: 32%;
+        text-align: left;
+        padding: 15.5% 0 15.5% 75px;
+    }
+    .case-overview {
+        width: 65%;
+    }
+}
+
+.case-preview ul, .case-preview ul li {
+    line-height: 0px; /*奇怪的bottom间隙*/
+}
+
+.case-preview ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.case-preview img {
+    width: 70px;
+    height: 50px;
+    opacity: .4;
+    transition: .5s all ease;
+    border: 1px #999999 solid;
+}
+
+.case-preview img:hover {
+    opacity: 1;
+}
+
+.case-overview div {
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+
+
+
+.team-info, .team-overview {
+    width: 100%;
+    display: block;
+}
+
+.team-info {
+    background: #ccbc8b;
+    padding: 10px;
+}
+
+.team-overview {
+    height: 450px;
+    overflow: hidden;
+}
+
+.team-overview ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@media (min-width: 768px) {
+    .team-info, .team-overview {
+        display: inline-block;
+        height: 450px;
+    }
+    .team-info {
+        width: 32%;
+        text-align: left;
+        padding: 13.5% 10px;
+    }
+    .team-overview {
+        width: 65%;
+    }
+}
+
+.team-overview ul {
+    width: 100%;
+}
+
+.team-overview ul li {
+    width: 10%;
+    transition: 1s all ease;
+}
+
+.team-overview ul, .team-overview li {
+    height: 100%;
+}
+
+.team-overview div {
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.team-overview ul li:hover, .team-overview ul li.hover {
+    width: 49%;
+}
+
+
+
+
