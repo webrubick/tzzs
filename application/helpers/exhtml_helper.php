@@ -60,7 +60,7 @@ if ( ! function_exists('script_tag'))
 		{
 			if (preg_match('#^([a-z]+:)?//#i', $src))
 			{
-				$link .= 'scr="'.$src.'" ';
+				$link .= 'src="'.$src.'" ';
 			}
 			else
 			{
