@@ -13,15 +13,9 @@
     	           		    &nbsp;&nbsp;&nbsp;&nbsp;
     	           		    邮编：<?php print_r($website['com_postcode']); ?>
                             <br/>
-                            电话（总机）：<a href="tel:0512-82272000">0512-82272000</a> 
-                                        <a href="tel:68282740">68282740</a> 
-                                        <a href="tel:68278363">68278363</a> 
+                            电话：<a href="tel:<?php print_r($website['contact']); ?>"><?php print_r($website['contact']); ?></a> 
                             <br/>
-                            客户热线：<a href="tel:4008870000">4008870000</a> 业务合作：<a href="tel:0512-68661088   ">0512-68661088</a>
-                            <br/>
-                            传真：0512-68665562
-    	           		    <br/>
-    	           		    <span>苏IPC备XXXXXXX号</span>
+    	           		    <a href="<?php print_r($website['beian_url']); ?>"><?php print_r($website['beian_no']); ?></a>
     	           		</td>
     	           	</tr>
                	</table>

@@ -3,6 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends MY_Controller {
 
+    public function __construct() {
+		parent::__construct();
+    }
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,6 +24,22 @@ class Welcome extends MY_Controller {
 	 */
 	public function index()
 	{
+	    $this->set_index_header('index');
 		$this->load->view('index.php', $this);
+	}
+	
+	public function dx_about() {
+	    $this->set_index_header('about');
+		$this->load->view('about', $this);
+	}
+	
+	public function dx_case() {
+	    $this->set_index_header('case');
+		$this->load->view('case-main', $this);
+	}
+	
+	public function dx_contact() {
+	    $this->set_index_header('contact');
+		$this->load->view('contact', $this);
 	}
 }
