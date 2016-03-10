@@ -119,9 +119,9 @@ $extra_head[] = exlink_tag('public/css/index.css');
                                 <div class="team-img-window" style="background-image: url('public/img/home-gallery-1.jpg')"></div>
                                 
                                 <ul style="width: 100%; position: absolute; top: 0px">
-                                    <li style="background: #fff; position: absolute; width: 10px; height: 100%; left: 25%; margin-left: -10px">
-                                    </li><li style="background: #fff; position: absolute; width: 10px; height: 100%; left: 50%; margin-left: -10px">
-                                    </li><li style="background: #fff; position: absolute; width: 10px; height: 100%; left: 75%; margin-left: -10px">
+                                    <li style="background: #fff; position: relative; width: 10px; height: 100%; left: -25%; margin-left: 10px; margin-right: 0px">
+                                    </li><li style="background: #fff; position: relative; width: 10px; height: 100%; left: 0%; margin-left: -10px; margin-right: 0px">
+                                    </li><li style="background: #fff; position: relative; width: 10px; height: 100%; left: 25%; margin-left: -10px; margin-right: 0px">
                                     </li>
                                 </ul>
                             </li>
