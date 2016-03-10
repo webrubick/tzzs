@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://dx-sj.com/';
+$config['base_url'] = 'http://www.dx-sj.com/';
 
 /*
 |--------------------------------------------------------------------------
