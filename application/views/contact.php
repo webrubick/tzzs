@@ -4,9 +4,9 @@ $extra_head[] = exlink_tag('public/css/index.css');
 $extra_head[] = script_tag('http://api.map.baidu.com/api?key=&v=1.1&services=true');
 ?>
 
-<?php $this->load->view('common/page-top.php', array('extra_head' => $extra_head)); ?>
+<?php $this->load->view('common/page-top', array('extra_head' => $extra_head)); ?>
 
-<?php $this->load->view('common/page-header.php', array('extra_header' => array())); ?>
+<?php $this->load->view('common/page-header', array('extra_header' => array())); ?>
         
         <style type="text/css">
             html,body{margin:0;padding:0;}
@@ -18,6 +18,7 @@ $extra_head[] = script_tag('http://api.map.baidu.com/api?key=&v=1.1&services=tru
                 max-width: auto !important;
             }
         </style>
+        
         <!-- main content -->
         <section class="content-wrap">
             <section class="sub-page content text-normal">
@@ -162,4 +163,4 @@ $extra_head[] = script_tag('http://api.map.baidu.com/api?key=&v=1.1&services=tru
         initMap();//创建和初始化地图
     </script>
         
-<?php $this->load->view('common/page-bottom.php'); ?>
+<?php $this->load->view('common/page-bottom'); ?>

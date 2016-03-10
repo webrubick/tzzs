@@ -68,6 +68,12 @@
 }
 /*end*/
 
+
+
+
+
+
+
 .case-preview, .case-overview {
     width: 100%;
     display: block;
@@ -181,7 +187,7 @@
     height: 100%;
 }
 
-.team-overview div {
+.team-overview .team-img-window {
     height: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -189,7 +195,6 @@
     background-size: cover;
     background-position: center center;
 }
-
 
 .team-overview ul li:hover, .team-overview ul li.hover {
     width: 49%;

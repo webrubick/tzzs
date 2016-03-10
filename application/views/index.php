@@ -3,9 +3,9 @@ $extra_head[] = title_tag($website['website_name']);
 $extra_head[] = exlink_tag('public/css/index.css');
 ?>
 
-<?php $this->load->view('common/page-top.php', array('extra_head' => $extra_head)); ?>
+<?php $this->load->view('common/page-top', array('extra_head' => $extra_head)); ?>
 
-<?php $this->load->view('common/page-header.php', array('extra_header' => array())); ?>
+<?php $this->load->view('common/page-header', array('extra_header' => array())); ?>
         
         <!-- main content -->
         <section class="content home text-center">
@@ -69,7 +69,11 @@ $extra_head[] = exlink_tag('public/css/index.css');
         <section class="content home text-center tansparent">
             <span class="home-vline"></span>
             <main class="fixed-width tc-inverse text-center">
-                1
+                
+<?php $this->load->view('templates/template-brand-aspiration'); ?>
+
+                <p>&nbsp;</p>
+                
             </main>
         </section>
         
@@ -108,23 +112,16 @@ $extra_head[] = exlink_tag('public/css/index.css');
                     <div class="home-block-content home-block-canvas">
                         <ul>
                             <li class="team-info text-left tc-inverse">
-                                我们秉承“虔诚为客户服务”的理念，以“完美源于细节，口碑来自真诚”为宗旨，引领行业的持久创新发展。
-                                创百年品牌，致力“成为最受尊敬的卓越的装饰品牌运营商”的企业愿景，成为推动金蚂蚁健康、快速发展的内在驱动力。
+                                我们拥有舒适的办公环境，秉承“虔诚为客户服务”的理念，以“完美源于细节，口碑来自真诚”为宗旨，引领行业的持久创新发展。
                                 我们将为您提供最专业、最真诚的完美贴心服务。
-                            </li><li class="team-overview">
-                                <ul>
-                                    <li class="hover">
-                                        <div style="background-image: url('public/img/home-gallery-1.jpg')"></div>
-                                    </li><li>
-                                        <div style="background-image: url('public/img/home-gallery-1.jpg')"></div>
-                                    </li><li>
-                                        <div style="background-image: url('public/img/home-gallery-1.jpg')"></div>
-                                    </li><li>
-                                        <div style="background-image: url('public/img/home-gallery-1.jpg')"></div>
-                                    </li><li>
-                                        <div style="background-image: url('public/img/home-gallery-1.jpg')"></div>
-                                    </li><li>
-                                        <div style="background-image: url('public/img/home-gallery-1.jpg')"></div>
+                                致力“成为最受尊敬的卓越的装饰品牌运营商”的企业愿景，成为推动金蚂蚁健康、快速发展的内在驱动力。
+                            </li><li class="team-overview" style="position:relative">
+                                <div class="team-img-window" style="background-image: url('public/img/home-gallery-1.jpg')"></div>
+                                
+                                <ul style="width: 100%; position: absolute; top: 0px">
+                                    <li style="background: #fff; position: relative; width: 10px; height: 100%; left: -25%; margin-left: 10px; margin-right: 0px">
+                                    </li><li style="background: #fff; position: relative; width: 10px; height: 100%; left: 0%; margin-left: -10px; margin-right: 0px">
+                                    </li><li style="background: #fff; position: relative; width: 10px; height: 100%; left: 25%; margin-left: -10px; margin-right: 0px">
                                     </li>
                                 </ul>
                             </li>
@@ -134,9 +131,9 @@ $extra_head[] = exlink_tag('public/css/index.css');
             </main>
         </section>
         
-<?php $this->load->view('common/page-footer.php'); ?>
+<?php $this->load->view('common/page-footer'); ?>
         
         <?php echo script_tag('public/js/core.min.js'); ?>
         <?php echo script_tag('public/js/rb-script.js'); ?>
         
-<?php $this->load->view('common/page-bottom.php'); ?>
+<?php $this->load->view('common/page-bottom'); ?>
