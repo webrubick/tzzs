@@ -36,19 +36,17 @@ $extra_head[] = script_tag('http://api.map.baidu.com/api?key=&v=1.1&services=tru
                     <p/>
                     
                     <div class="highlight" style="font-size: 14px; line-height: 2em;">
-                        地址：江苏省泰兴市西环路888号
+                        地址：<?php print_r($website['com_address']); ?>
                         <br/>
-                        邮编：225453
+                        邮编：<?php print_r($website['com_postcode']); ?>
                         <br/>
-                        电话（总机）：<a href="tel:0512-82272000">0512-82272000</a> 
-                                    <a href="tel:68282740">68282740</a> 
-                                    <a href="tel:68278363">68278363</a> 
+                        电话（总机）：<a href="tel:<?php print_r($website['contact']); ?>"><?php print_r($website['contact']); ?></a> 
                         <br/>
-                        客户热线：<a href="tel:4008870000">4008870000</a>
+                        客户热线：<a href="tel:<?php print_r($website['contact']); ?>"><?php print_r($website['contact']); ?></a> 
                         <br/>
-                        业务合作：<a href="tel:0512-68661088   ">0512-68661088</a>
+                        业务合作：<a href="tel:<?php print_r($website['contact']); ?>"><?php print_r($website['contact']); ?></a> 
                         <br/>
-                        传真：0512-68665562
+                        传真：-
                     </div>
                     
                     <div class="subtitle"></div>

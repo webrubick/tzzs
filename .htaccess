@@ -6,7 +6,6 @@ SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png|exe|t?gz|zip|bz2|sit|rar|pdf|mov|av
 AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/javascript application/javascript application/x-httpd-php application/x-javascript #设置对压缩的文件
 </IfModule>
 
-
 <IfModule authz_core_module>
 	Require all denied
 </IfModule>
