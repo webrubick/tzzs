@@ -22,8 +22,14 @@ class MY_Controller extends CI_Controller {
                 'com_address' => '江苏省泰兴市济川路12号3楼',
                 'com_postcode' => '225453',
                 'contact' => '0523-87781789',
+                
+                
                 'beian_no' => '苏ICP备16009335号-1',
                 'beian_url' => 'http://www.miitbeian.gov.cn/',
+                
+                
+                'com_keywords' => '',
+                'com_description' => '',
             );
 	}
 
