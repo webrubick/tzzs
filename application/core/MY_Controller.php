@@ -30,6 +30,10 @@ class MY_Controller extends CI_Controller {
                 
                 'com_keywords' => '',
                 'com_description' => '',
+                
+                'website_home_bg' => 'public/img/home-gallery-1.jpg',
+                'website_logo_small' => 'public/img/logo_200x225.png',
+                'website_logo_middle' => 'public/img/logo_200x225.png',
             );
 	}
 

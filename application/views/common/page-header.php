@@ -1,5 +1,6 @@
+		
 		<section>
-            <div class="fixed-bg bg-cover" style="background-image: url('public/img/home-gallery-1.jpg')"></div>
+            <div class="fixed-bg bg-cover" style="background-image: url('<?php print_r($website['website_home_bg']); ?>')"></div>
             <div class="fixed-layer"></div>
         </section>
 
