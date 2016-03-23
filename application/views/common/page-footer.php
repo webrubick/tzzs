@@ -4,7 +4,7 @@
                 <table class="com-info">
     	           	<tr>
     	           		<td style="width: 50%">
-    	           		    <img class="footer-logo" src="public/img/logo_200x225.png"/>
+    	           		    <img class="footer-logo" src="<?php print_r($website['website_logo_middle']); ?>"/>
     	           		    <br/>
     	           		    <span>© <span class="copyright-year"></span> <a href="/"><?php print_r($website['website_name']); ?></a></span>
     					</td>

@@ -57,5 +57,15 @@ $route['dx_case/(.+)'] = 'welcome/dx_case';
 $route['dx_contact'] = 'welcome/dx_contact';
 $route['dx_contact/(.+)'] = 'welcome/dx_contact';
 
+/**
+ * 案例
+ */
+$route['case'] = 'welcome/dx_case';
+$route['case/index'] = 'welcome/dx_case';
+$route['case/list'] = 'welcome/dx_case';
+$route['case/all'] = 'welcome/dx_case';
+$route['case/(:any)'] = 'dx_case/by_key/$1';
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
