@@ -12,19 +12,41 @@ $extra_head[] = exlink_tag('public/css/case.css');
         <section class="content-wrap">
             <section class="sub-page content text-center">
                 <main class="sub-page fixed-width tc-normal">
+<?php if (isset($dx_cases) && !empty($dx_cases)) :?>
                     <ul class="case-gallery">
+    <?php $ite_flag = FALSE; ?>
+    <?php foreach ($dx_cases as $dx_case) : ?>
+        <?php if ($ite_flag) : ?>
+
+                        </li><li>
+        <?php else : ?>
+                        
                         <li>
-                            <div class="common-amin" style="background-image: url('public/img/home-gallery-1.jpg')"/>
-                        </li><li>
-                            <div class="common-amin" style="background-image: url('public/img/home-gallery-1.jpg')"/>
-                        </li><li>
-                            <div class="common-amin" style="background-image: url('public/img/home-gallery-1.jpg')"/>
-                        </li><li>
-                            <div class="common-amin" style="background-image: url('public/img/home-gallery-1.jpg')"/>
-                        </li><li>
-                            <div class="common-amin" style="background-image: url('public/img/home-gallery-1.jpg')"/>
+        <?php $ite_flag = TRUE ; ?>
+        <?php endif ; ?>
+
+                            <div class="common-amin" style="background-image: url('public/img/preview.jpg')">
+                                <span><?php print_r($dx_case['title']); ?></span>
+                            </div>
+    <?php endforeach; ?>
+    
                         </li>
                     </ul>
+
+<?php else: ?>
+                    
+                    <img src="public/img/case-404.png" />
+                    
+                    <p class="case-404 no-indent">
+                        我们还没有更新案例哦，一起期待吧~~
+                    </p>
+                    
+                    <p>
+                        &nbsp;
+                    </p>
+                    
+<?php endif; ?>
+                    
                 </main>
             </section>
         

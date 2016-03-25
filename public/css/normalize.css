@@ -318,6 +318,7 @@ html input[disabled] {
  * Remove inner padding and border in Firefox 4+.
  */
 
+::-moz-focus-inner,
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
