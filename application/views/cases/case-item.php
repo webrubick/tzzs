@@ -15,11 +15,25 @@ $extra_head[] = exlink_tag('public/css/case.css');
                     
 <?php if (isset($dx_case)) :?>
 
-                    <h3 class="title">
-                        <?php print_r( $dx_case['title'] ); ?>
-                    </p>
+                    <section class="home-block text-center">
+                        <h3 class="title hover">
+                            <?php print_r( $dx_case['title'] ); ?>
+
+                        </h3>
+                        
+                        <div class="home-block-title-wrap">
+                            <div>
+                                <?php print_r( $dx_case['update_time'] ); ?>
+                            
+                            </div>
+                        </div>
+                    </section>
                     
+                    <section class="case-content">
+                        
 <?php $this->load->file(FCPATH . $dx_case['content_path'] . '/content.html'); ?>
+
+                    </section>
                     
 <?php else: ?>
                     

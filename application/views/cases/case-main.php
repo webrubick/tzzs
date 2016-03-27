@@ -13,6 +13,16 @@ $extra_head[] = exlink_tag('public/css/case.css');
             <section class="sub-page content text-center">
                 <main class="sub-page fixed-width tc-normal">
 <?php if (isset($dx_cases) && !empty($dx_cases)) :?>
+
+                    <section class="home-block text-center">
+                        <div class="home-block-title-wrap">
+                            <div>
+                                <h2 class="home-block-title">CASE LIST</h2>
+                                <h3 class="home-block-subtitle">案 例 列 表</h3>
+                            </div>
+                        </div>
+                    </section>
+                    
                     <ul class="case-gallery">
     <?php $ite_flag = FALSE; ?>
     <?php foreach ($dx_cases as $dx_case) : ?>
@@ -25,13 +35,20 @@ $extra_head[] = exlink_tag('public/css/case.css');
         <?php $ite_flag = TRUE ; ?>
         <?php endif ; ?>
 
-                            <div class="common-amin" style="background-image: url('public/img/preview.jpg')">
-                                <span><?php print_r($dx_case['title']); ?></span>
+                            <div class="preview common-amin" style="background-image: url('<?php print_r($dx_case['content_path'] . $dx_case['preview']) ;?>')">
+                                <a class="case-link" href="case/<?php print_r($dx_case['id']); ?>" target="_blank">&nbsp;</a>
+                                <div class="case-title"><?php print_r($dx_case['title']); ?></div>
                             </div>
     <?php endforeach; ?>
     
                         </li>
                     </ul>
+
+<?php $this->load->view('cases/case-list-pager'); ?>
+                    
+                    <p>&nbsp;</p>
+                    
+                    <p>&nbsp;</p>
 
 <?php else: ?>
                     

@@ -28,7 +28,7 @@ class Case_model extends MY_Model {
 	}
 	
 	public function get_page_data($page_size, $offset = 0, $conditions = NULL) {
-		$sql = "select * from " . $this::TABLE_NAME . " order by update_time desc limit {$offset},{$page_size}";
+		$sql = "select * from " . $this::TABLE_NAME . " order by update_time desc, id desc limit {$offset},{$page_size}";
 	    $this->db->select($this->COLS);
         return $this->db->query($sql)->result_array();
 	}

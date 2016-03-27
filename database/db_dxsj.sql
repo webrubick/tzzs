@@ -46,7 +46,10 @@ DROP TRIGGER IF EXISTS `db_dxsj`.`tab_cases_BEFORE_INSERT` $$
 USE `db_dxsj`$$
 CREATE DEFINER = CURRENT_USER TRIGGER `db_dxsj`.`tab_cases_BEFORE_INSERT` BEFORE INSERT ON `tab_cases` FOR EACH ROW
 BEGIN
-set @temp_now = now(); set new.`create_time` = @temp_now ; set new.`update_time` = @temp_now ;
+    IF @disable_triggers IS NULL THEN
+		set @temp_now = now(); set new.`create_time` = @temp_now ; set new.`update_time` = @temp_now ;
+	END IF;
+	
 END$$
 
 
@@ -55,7 +58,10 @@ DROP TRIGGER IF EXISTS `db_dxsj`.`tab_cases_BEFORE_UPDATE` $$
 USE `db_dxsj`$$
 CREATE DEFINER = CURRENT_USER TRIGGER `db_dxsj`.`tab_cases_BEFORE_UPDATE` BEFORE UPDATE ON `tab_cases` FOR EACH ROW
 BEGIN
-set new.`update_time` = now() ;
+    IF @disable_triggers IS NULL THEN
+        set new.`update_time` = now() ;
+    END IF;
+    
 END$$
 
 

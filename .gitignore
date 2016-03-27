@@ -117,3 +117,13 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 #*/cache/*
 #!*/cache/index.html
 #!*/cache/.htaccess
+
+
+
+
+# =========================
+# 项目自身
+# =========================
+# With version 1.8.2 and later of git
+
+**/uploads/caseimg/*
