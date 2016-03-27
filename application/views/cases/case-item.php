@@ -18,13 +18,11 @@ $extra_head[] = exlink_tag('public/css/case.css');
                     <section class="home-block text-center">
                         <h3 class="title hover">
                             <?php print_r( $dx_case['title'] ); ?>
-
                         </h3>
                         
-                        <div class="home-block-title-wrap">
+                        <div class="case-block-title-wrap">
                             <div>
                                 <?php print_r( $dx_case['update_time'] ); ?>
-                            
                             </div>
                         </div>
                     </section>

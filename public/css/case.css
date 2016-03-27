@@ -111,6 +111,31 @@
 /*    margin-top: -100px;*/
 /*}*/
 
+.case-block-title-wrap {
+    height: 2em;
+    line-height: 2em;
+}
+
+.case-block-title-wrap div, .case-block-title-wrap:before, .case-block-title-wrap:after {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.case-block-title-wrap:before, .case-block-title-wrap:after {
+    content: "";
+    background: #ccbc8b;
+    position: relative;
+    width: 50px;
+    height: 1px;
+    top: 50%;
+}
+
+@media(min-width: 768px) {
+    .case-block-title-wrap:before, .case-block-title-wrap:after {
+        width: 100px;
+    }
+}
+
 
 .case-404 {
     font-size: 2.75em;
