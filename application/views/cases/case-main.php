@@ -11,14 +11,14 @@ $extra_head[] = exlink_tag('public/css/case.css');
         <!-- main content -->
         <section class="content-wrap">
             <section class="sub-page content text-center">
-                <main class="sub-page fixed-width tc-normal">
+                <main class="sub-page sub-page-case fixed-width tc-normal">
 <?php if (isset($dx_cases) && !empty($dx_cases)) :?>
 
                     <section class="home-block text-center">
                         <div class="home-block-title-wrap">
                             <div>
                                 <h2 class="home-block-title">CASE LIST</h2>
-                                <h3 class="home-block-subtitle">案 例 列 表</h3>
+                                <h3 class="home-block-subtitle">装 修 设 计</h3>
                             </div>
                         </div>
                     </section>
@@ -48,8 +48,6 @@ $extra_head[] = exlink_tag('public/css/case.css');
                     
                     <p>&nbsp;</p>
                     
-                    <p>&nbsp;</p>
-
 <?php else: ?>
                     
                     <img src="public/img/case-404.png" />

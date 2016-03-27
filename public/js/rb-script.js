@@ -78,7 +78,7 @@ function isIE() {
 		var oSub = (mainVPadding + m / 2) + 'px';
 		mains.each(function() {
 		    var me = $(this);
-		    if (me.hasClass('sub-page')) {
+		    if (me.hasClass('sub-page-case')) {
 		        me.css({
         		    'padding-top': oSub,
         		    'padding-bottom': oSub,
@@ -149,4 +149,28 @@ function isIE() {
             lastHover = who;
         });
     });
+})(jQuery);
+
+
+
+/**
+ * 
+ */
+ ;
+(function($) {
+    var caseBlocks = $('.home-case-block');
+    
+    caseBlocks.each(function() {
+        var caseBlock = $(this);
+        var overview = caseBlock.find('.case-overview div');
+        var imgs = caseBlock.find('.case-preview ul li img');
+        imgs.hover(function() {
+            overview.css({
+                'background-image' : 'url(' + $(this).attr('src') + ')'
+            });
+        }, function() {
+            
+        });
+    });
+    
 })(jQuery);

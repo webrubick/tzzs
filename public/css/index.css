@@ -104,7 +104,8 @@
 }
 
 .case-preview ul, .case-preview ul li {
-    line-height: 0px; /*奇怪的bottom间隙*/
+    /*line-height: 0px;*/
+    /*奇怪的bottom间隙*/
 }
 
 .case-preview ul li {
