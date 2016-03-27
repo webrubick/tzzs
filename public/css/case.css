@@ -87,6 +87,7 @@
 }
 
 #case-listing-pager ul {
+    font-size: 16px;
     line-height: 2.5em;
 }
 
@@ -98,7 +99,7 @@
 #case-listing-pager li a, #case-listing-pager li span {
     padding: 0.25em 0.75em;
     border: 1px solid #ccc;
-    margin-left: .5em;
+    margin-left: .35em;
 }
 
 #case-listing-pager li a:hover, #case-listing-pager li.checked span {

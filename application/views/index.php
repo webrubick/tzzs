@@ -12,57 +12,9 @@ $extra_head[] = exlink_tag('public/css/index.css');
             <span class="home-vline"></span>
             
             <main class="fixed-width tc-normal text-center">
-                <section class="home-block">
-                    <div class="home-block-title-wrap text-center">
-                        <div>
-                            <h2 class="home-block-title">DESIGN CASE</h2>
-                            <h3 class="home-block-subtitle">设 计 装 饰 案 例</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="home-block-content home-block-canvas">
-                        <ul>
-                            <li class="case-preview text-left">
-                                <ul>
-                                    <li>
-                                        <img src="public/img/home-gallery-1.jpg"/>
-                                    </li><li>
-                                        <img src="public/img/home-gallery-1.jpg"/>
-                                    </li>
-                                </ul>
-                            </li><li class="case-overview">
-                                <div style="background-image: url('public/img/home-gallery-1.jpg')">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
                 
-                <section class="home-block">
-                    <div class="home-block-title-wrap text-center">
-                        <div>
-                            <h2 class="home-block-title">DESIGN CASE</h2>
-                            <h3 class="home-block-subtitle">设 计 装 饰 案 例</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="home-block-content home-block-canvas">
-                        <ul>
-                            <li class="case-preview text-left">
-                                <ul>
-                                    <li>
-                                        <img src="public/img/home-gallery-1.jpg"/>
-                                    </li><li>
-                                        <img src="public/img/home-gallery-1.jpg"/>
-                                    </li>
-                                </ul>
-                            </li><li class="case-overview">
-                                <div style="background-image: url('public/img/home-gallery-1.jpg')">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
+ <?php $this->load->view('templates/template-home-case'); ?>
+                
             </main>
         </section>
         

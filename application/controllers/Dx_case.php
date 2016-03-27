@@ -10,7 +10,7 @@ class Dx_case extends MY_Controller {
     public function case_main() {
 	    $this->set_index_header('case');
 	    
-	    $page_size = 24;
+	    $page_size = 12;
 	    $currentpage = intval($this->input->get_post('currentpage', TRUE));
 		// print_r($currentpage);
 		if (!isset($currentpage) || $currentpage <= 0) {
