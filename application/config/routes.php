@@ -52,18 +52,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['dx_about'] = 'welcome/dx_about';
 $route['dx_about/(.+)'] = 'welcome/dx_about';
-$route['dx_case'] = 'welcome/dx_case';
-$route['dx_case/(.+)'] = 'welcome/dx_case';
+$route['dx_case'] = 'dx_case/case_main';
 $route['dx_contact'] = 'welcome/dx_contact';
 $route['dx_contact/(.+)'] = 'welcome/dx_contact';
 
 /**
  * 案例
  */
-$route['case'] = 'welcome/dx_case';
-$route['case/index'] = 'welcome/dx_case';
-$route['case/list'] = 'welcome/dx_case';
-$route['case/all'] = 'welcome/dx_case';
+$route['case'] = 'dx_case/case_main';
+$route['case/index'] = 'dx_case/case_main';
+$route['case/list'] = 'dx_case/case_main';
+$route['case/all'] = 'dx_case/case_main';
 $route['case/(:any)'] = 'dx_case/by_key/$1';
 
 

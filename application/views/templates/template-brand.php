@@ -1,7 +1,7 @@
             
             <section class="brand text-center">
                 <div class="brand-area">
-                    <a href="javascript:;">
+                    <div href="javascript:;">
     	                <div class="brand_logo">
     	                    <span class="fa fa-star-o"></span>
     	                    <span class="fa fa-star-o"></span>
@@ -12,7 +12,7 @@
     	                	<big>鼎&nbsp;&nbsp;鑫&nbsp;&nbsp;</big>设&nbsp;&nbsp;计&nbsp;&nbsp;<big>装&nbsp;&nbsp;饰</big>
     	                </div>
     	                <div class="brand_slogan">DingXin Design & Decorate | <span class="copyright-year"></span></div>
-    	            </a>
+    	            </div>
                 </div>
                 <span class="hint-aspiration">
                     <ul>

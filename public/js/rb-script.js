@@ -75,10 +75,22 @@ function isIE() {
 		});
 		
 		var o = (mainVPadding + m) + 'px';
-		mains.css({
-		    'padding-top': o,
-		    'padding-bottom': o,
+		var oSub = (mainVPadding + m / 2) + 'px';
+		mains.each(function() {
+		    var me = $(this);
+		    if (me.hasClass('sub-page')) {
+		        me.css({
+        		    'padding-top': oSub,
+        		    'padding-bottom': oSub,
+        		});
+		    } else {
+		        me.css({
+        		    'padding-top': o,
+        		    'padding-bottom': o,
+        		});
+		    }
 		});
+		
 	}
 	update();
 	$(window).resize(function() {

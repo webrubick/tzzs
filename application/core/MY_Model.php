@@ -251,7 +251,7 @@ class MY_Model extends CI_Model {
     public function filter_cols($data) {
         return array_filter_by_key($data, $this->INSERT_COLS);
     }
-	
+    
 }
 
 

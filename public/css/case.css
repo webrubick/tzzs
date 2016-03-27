@@ -5,14 +5,38 @@
 
 .case-gallery li {
     display: inline-block;
-    width: 30%;
+    width: 300px;
     height: 250px;
     margin: 2em 5px;
+    vertical-align: top;
 }
 
-.case-gallery li div {
+@media (min-width: 480px) {
+    .case-gallery li {
+        width: 400px;
+        height: 333px;
+    }
+}
+
+@media (min-width: 768px) {
+    .case-gallery li {
+        width: 320px;
+        height: 266px;
+    }
+}
+
+@media (min-width: 992px) {
+    .case-gallery li {
+        width: 300px;
+        height: 250px;
+    }
+}
+
+.case-gallery li .preview {
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    position: relative;
     
     background-size: cover;
     -webkit-background-size: cover;
@@ -30,11 +54,64 @@
     
 }
 
-.case-gallery li div:hover {
+.case-gallery li .preview:hover {
     transform: scale(1.2);
     -webkit-box-transform: scale(1.2);
     -moz-transform: scale(1.2);
     -o-transform: scale(1.2);
     -ms-transform: scale(1.2);
+    
+    z-index: 1; /*需要有层次*/
 }
 
+.case-title {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    color: #fff;
+    background: rgba( 204, 188, 139, .8);
+    padding: 5px;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+
+.case-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.case-content .content-img {
+    display: inline;
+}
+
+#case-listing-pager ul {
+    line-height: 2.5em;
+}
+
+#case-listing-pager li {
+    position: relative;
+    display: inline-block;
+}
+
+#case-listing-pager li a, #case-listing-pager li span {
+    padding: 0.25em 0.75em;
+    border: 1px solid #ccc;
+    margin-left: .5em;
+}
+
+#case-listing-pager li a:hover, #case-listing-pager li.checked span {
+    color: #fff;
+    background: #ccbc8b;
+}
+
+/*.case-gallery li .preview:hover .case-title {*/
+/*    visibility: visible;*/
+/*    margin-top: -100px;*/
+/*}*/
+
+
+.case-404 {
+    font-size: 2.75em;
+}

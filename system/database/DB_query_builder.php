@@ -2305,7 +2305,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 		{
 			return $this->_limit($sql."\n");
 		}
-
+		
 		return $sql;
 	}
 
