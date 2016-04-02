@@ -60,7 +60,7 @@
 }
 
 .home-block-canvas ul, .home-block-canvas > ul > li {
-    transition: .5s all linear;
+    transition: all .5s linear;
 }
 
 .home-block-canvas > ul > li {
@@ -117,7 +117,7 @@
     width: 70px;
     height: 50px;
     opacity: .4;
-    transition: .5s all ease;
+    transition: all .5s ease;
     border: 1px #999999 solid;
 }
 
@@ -181,7 +181,7 @@
 
 .team-overview ul li {
     width: 10%;
-    transition: 1s all ease;
+    transition: all 1s ease;
 }
 
 .team-overview ul, .team-overview li {

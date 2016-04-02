@@ -9,7 +9,7 @@
     	                    <span class="fa fa-star-o"></span>
     	                </div>
     	                <div class="brand_name">
-    	                	<big>鼎&nbsp;&nbsp;鑫&nbsp;&nbsp;</big>设&nbsp;&nbsp;计&nbsp;&nbsp;<big>装&nbsp;&nbsp;饰</big>
+    	                	鼎&nbsp;&nbsp;鑫&nbsp;&nbsp;设&nbsp;&nbsp;计&nbsp;&nbsp;装&nbsp;&nbsp;饰
     	                </div>
     	                <div class="brand_slogan">DingXin Design & Decorate | <span class="copyright-year"></span></div>
     	            </div>

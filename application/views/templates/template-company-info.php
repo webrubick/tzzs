@@ -44,13 +44,6 @@
                                 我们拥有舒适的办公环境，秉承“虔诚为客户服务”的理念，以“完美源于细节，口碑来自真诚”为宗旨，引领行业的持久创新发展。
                             </li><li class="team-overview" style="position:relative">
                                 <div class="team-img-window" style="background-image: url('uploads/com/1.pic.jpg')"></div>
-                                
-                                <ul style="width: 100%; position: absolute; top: 0px">
-                                    <li style="background: #fff; position: relative; width: 10px; height: 100%; left: -25%; margin-left: 10px; margin-right: 0px">
-                                    </li><li style="background: #fff; position: relative; width: 10px; height: 100%; left: 0%; margin-left: -10px; margin-right: 0px">
-                                    </li><li style="background: #fff; position: relative; width: 10px; height: 100%; left: 25%; margin-left: -10px; margin-right: 0px">
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -63,13 +56,6 @@
                         <ul>
                             <li class="team-overview" style="position:relative">
                                 <div class="team-img-window" style="background-image: url('uploads/com/2.pic.jpg')"></div>
-                                
-                                <ul style="width: 100%; position: absolute; top: 0px">
-                                    <li style="background: #fff; position: relative; width: 10px; height: 100%; left: -25%; margin-left: 10px; margin-right: 0px">
-                                    </li><li style="background: #fff; position: relative; width: 10px; height: 100%; left: 0%; margin-left: -10px; margin-right: 0px">
-                                    </li><li style="background: #fff; position: relative; width: 10px; height: 100%; left: 25%; margin-left: -10px; margin-right: 0px">
-                                    </li>
-                                </ul>
                             </li><li class="team-info text-left tc-inverse">
                                 &lt;&lt;&nbsp;&nbsp;服务至上<br/><br/>
                                 我们将竭诚为您提供最专业、最真诚、最安心的完美贴心服务。
