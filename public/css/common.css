@@ -18,7 +18,7 @@ body, html {
 }
 
 a, button, input, .common-amin {
-    transition: .3s all ease;
+    transition: all .3s ease;
 }
 
 a, a[href^="tel:"], a[href^="callto:"] {
@@ -162,7 +162,7 @@ a:hover, a.highlight:hover, .highlight a:hover {
 /*=============================*/
 /*nav bar*/
 .navbar {
-	transition: .3s background ease;
+	transition: background .3s ease;
 }
 
 .navbar {
@@ -337,6 +337,17 @@ footer .com-info {
     left: 0;
     right: 0;
     z-index: -1;
+    background: -moz-linear-gradient(top, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 10%, rgba(151, 132, 104, 0.5) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 10%, rgba(151, 132, 104, 0.5) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 10%, rgba(151, 132, 104, 0.5) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b3000204', endColorstr='#b3978468', GradientType=0);
+    /* IE6-9 */
+}
+
+.fixed-layer-bakup {
     background: -moz-linear-gradient(top, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 30%, rgba(151, 132, 104, 0.7) 100%);
     /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(0, 2, 4, 0.7) 1%, rgba(0, 2, 4, 0.7) 30%, rgba(151, 132, 104, 0.7) 100%);
@@ -512,7 +523,7 @@ footer .com-info {
     text-overflow: ellipsis;
     text-transform: uppercase;
     cursor: pointer;
-    transition: .3s all ease;
+    transition: all .3s ease;
     margin-top: 4.878048780487805%;
 }
 
