@@ -60,11 +60,14 @@ $route['dx_contact/(.+)'] = 'welcome/dx_contact';
  * 案例
  */
 $route['case'] = 'dx_case/case_main';
+$route['case/main'] = 'dx_case/case_main';
 $route['case/index'] = 'dx_case/case_main';
 $route['case/list'] = 'dx_case/case_main';
 $route['case/all'] = 'dx_case/case_main';
 $route['case/(:any)'] = 'dx_case/by_key/$1';
 
+$route['admin/case'] = 'admin/dx_case';
+$route['admin/(:any)/(:any)'] = 'admin/$1_$2';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

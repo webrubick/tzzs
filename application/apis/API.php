@@ -75,6 +75,13 @@ class API {
 	public function ok($data = NULL) {
 		return common_result_ok($data);
 	}
+	
+	public function load_sessionaccess() {
+	    if (isset($this->sessionaccess)) {
+	        return;
+	    }
+	    $this->load->library('sessionaccess');
+	}
 
 	// --------------------------------------------------------------------
 

@@ -8,32 +8,6 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
--- Schema db_dxsj
--- -----------------------------------------------------
-DROP SCHEMA IF EXISTS `db_dxsj` ;
-
--- -----------------------------------------------------
--- Schema db_dxsj
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `db_dxsj` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
-USE `db_dxsj` ;
-
--- -----------------------------------------------------
--- Table `db_dxsj`.`tab_cases`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `db_dxsj`.`tab_cases` ;
-
-CREATE TABLE IF NOT EXISTS `db_dxsj`.`tab_cases` (
-  `id` INT NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `title` VARCHAR(1000) NULL,
-  `content_path` VARCHAR(1000) NULL COMMENT '内容所在目录',
-  `preview` VARCHAR(200) NULL DEFAULT 'preview.jpg' COMMENT '预览图图片名称',
-  `create_time` DATETIME NULL,
-  `update_time` DATETIME NULL,
-  PRIMARY KEY (`id`),
-  INDEX `tab_cases_updatetime_index` (`update_time` DESC));
-
--- -----------------------------------------------------
 -- Table `db_dxsj`.`tab_user`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `db_dxsj`.`tab_user` ;
@@ -56,44 +30,27 @@ CREATE UNIQUE INDEX `user_name_UNIQUE` ON `db_dxsj`.`tab_user` (`user_name` ASC)
 DROP TABLE IF EXISTS `db_dxsj`.`tab_website_info` ;
 
 CREATE TABLE IF NOT EXISTS `db_dxsj`.`tab_website_info` (
+  `domain` VARCHAR(50) NOT NULL,
   `website_name` VARCHAR(100) NULL,
   `com_address` VARCHAR(200) NULL,
   `com_postcode` VARCHAR(20) NULL,
   `contact` VARCHAR(100) NULL,
-  `beian_no` VARCHAR(50) NULL,
-  `beian_url` VARCHAR(50) NULL,
-  `com_keywords` VARCHAR(5000) NULL,
-  `com_description` VARCHAR(5000) NULL,
-  `website_home_bg` VARCHAR(100) NULL,
+  `com_keywords` VARCHAR(1000) NULL,
+  `com_description` VARCHAR(2000) NULL COMMENT '公司介绍',
+  `com_service_aim` VARCHAR(2000) NULL COMMENT '服务宗旨',
+  `com_service_aim_desc` VARCHAR(2000) NULL COMMENT '服务宗旨描述',
+  `com_desire` VARCHAR(2000) NULL COMMENT '愿景',
+  `beian_url` VARCHAR(100) NULL,
+  `beian_no` VARCHAR(100) NULL,
+  `website_home_bg` VARCHAR(200) NULL,
   `create_time` DATETIME NULL,
   `update_time` DATETIME NULL);
+  
+CREATE UNIQUE INDEX `domain_UNIQUE` ON `db_dxsj`.`tab_website_info` (`domain` ASC);
 
 USE `db_dxsj`;
 
 DELIMITER $$
-
-USE `db_dxsj`$$
-DROP TRIGGER IF EXISTS `db_dxsj`.`tab_cases_BEFORE_INSERT` $$
-USE `db_dxsj`$$
-CREATE DEFINER = CURRENT_USER TRIGGER `db_dxsj`.`tab_cases_BEFORE_INSERT` BEFORE INSERT ON `tab_cases` FOR EACH ROW
-BEGIN
-    IF @disable_triggers IS NULL THEN
-		set @temp_now = now(); set new.`create_time` = @temp_now ; set new.`update_time` = @temp_now ;
-	END IF;
-	
-END$$
-
-
-USE `db_dxsj`$$
-DROP TRIGGER IF EXISTS `db_dxsj`.`tab_cases_BEFORE_UPDATE` $$
-USE `db_dxsj`$$
-CREATE DEFINER = CURRENT_USER TRIGGER `db_dxsj`.`tab_cases_BEFORE_UPDATE` BEFORE UPDATE ON `tab_cases` FOR EACH ROW
-BEGIN
-    IF @disable_triggers IS NULL THEN
-        set new.`update_time` = now() ;
-    END IF;
-    
-END$$
 
 USE `db_dxsj`$$
 DROP TRIGGER IF EXISTS `db_dxsj`.`tab_user_BEFORE_INSERT` $$

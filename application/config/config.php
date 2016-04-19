@@ -362,9 +362,9 @@ $config['encryption_key'] = '';
 |
 */
 $config['sess_driver'] = 'files';
-$config['sess_cookie_name'] = 'tzfc_session';
+$config['sess_cookie_name'] = 'dxzs_session';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = FCPATH.'tzfc_sessions';
+$config['sess_save_path'] = FCPATH.'dxzs_session';
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 1800;
 $config['sess_regenerate_destroy'] = FALSE;

@@ -21,3 +21,13 @@ FLUSH privileges;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+-- -----------------------------------------------------
+-- Table `db_tzthfdc`.`Tab_User` data yytest
+-- -----------------------------------------------------
+-- dxsj123
+INSERT INTO `db_dxsj`.`Tab_User`(`user_name`, `password`, `salt`) VALUES ('admin', '58302b997d1195b9633282fbfd81615c', 'HIrVeF');
+
+INSERT INTO `db_dxsj`.`tab_website_info`(`domain`, `website_name`, `com_address`, `com_postcode`, `contact`, `com_keywords`, `com_description`, `com_service_aim`, `com_service_aim_desc`, `com_desire`, `beian_url`, `beian_no`, `website_home_bg`) VALUES ('dx-sj.com', '鼎鑫设计装饰', '江苏省泰兴市济川路12号3楼', '225453', '0523-87781789', '', '', '', '', '', 'http://www.miitbeian.gov.cn/', '苏ICP备16009335号-1', 'public/img/home-gallery-1.jpg');
+
