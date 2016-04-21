@@ -92,10 +92,14 @@ class Case_api extends API {
 		if (!isset($id) || empty($id)) { return $this->ex(11000); }
 
 		$this->load->model('case_model');
-		$result = $this->case_model->del_by_id($id);
-		if (!$result) {
-			log_message('error', 'case_del db failed');
-			return $this->ex(80001);
+		$target = $this->case_model->get_by_id($id);
+		if (isset($target)) {
+		    $result = $this->case_model->del_by_id($id);
+		    if (!$result) {
+    			return $this->ex(11001);
+    		}
+    		$this->load->helper('upload');
+    		del_case_content_path($this, $target['content_path']);
 		}
 		if ($return_list) {
 			return $this->case_list();

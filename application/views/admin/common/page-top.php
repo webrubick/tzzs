@@ -10,6 +10,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
         <meta name="Author" content="YY" />
         <meta name="Copyright" content="YY" />
+        <link rel="shortcut icon" href="public/favicon.ico">
+        
         <?php echo title_tag($website['website_name'] . '管理后台'); ?>
         
         <link href="public/css/normalize.css" rel="stylesheet" type="text/css">

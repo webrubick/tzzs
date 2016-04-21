@@ -9,14 +9,14 @@ class Website_info_model extends MY_Model {
 	const DOMAIN = 'dx-sj.com';
 
 	protected $COLS = array(
-		'domain', 'website_name', 'com_address', 'com_postcode', 'contact', 
-		'com_keywords', 'com_description', 'com_service_aim', 'com_desire', 
+		'domain', 'com_name', 'website_name', 'com_address', 'com_postcode', 'contact', 
+		'com_keywords', 'com_description', 'com_service_aim', 'com_service_aim_desc', 'com_desire', 
 		'beian_url', 'beian_no', 'website_home_bg', 
 		'create_time', 'update_time'
 	);
 	protected $INSERT_COLS = array(
-		'website_name', 'com_address', 'com_postcode', 'contact', 
-		'com_keywords', 'com_description', 'com_service_aim', 'com_desire', 
+		'com_name', 'website_name', 'com_address', 'com_postcode', 'contact', 
+		'com_keywords', 'com_description', 'com_service_aim', 'com_service_aim_desc', 'com_desire', 
 		'beian_url', 'beian_no', 'website_home_bg'
 	);
 	

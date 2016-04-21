@@ -119,11 +119,52 @@ class Admin extends MY_Controller {
         $this->check_state_api('POST');
 
 		// 获取所有的数据
-		$post = $this->input->post(NULL, TRUE);
+		$title = $this->input->post('title', TRUE);
 		
-		$api_result = NULL;
+        $this->load->api('admin_api');
+		$api_result = $this->admin_api->add_case($title);
 		if (is_ok_result($api_result)) {
 			$api_result['data'] = base_url('admin/case');
+		}
+		echo json_encode($api_result);
+    }
+    
+    public function case_subs_ajax() {
+        $this->check_state_api('POST');
+        $this->load->api('admin_api');
+        
+		$flag = $this->input->get_post('flag', TRUE);
+		$api_result = $this->admin_api->upload_case_subs($flag == 1);
+		if (is_ok_result($api_result)) {
+			$api_result['data'] = base_url('admin/case');
+		}
+		echo json_encode($api_result);
+    }
+    
+    public function case_preview_ajax() {
+        $this->check_state_api('POST');
+        $this->load->api('admin_api');
+        
+		$api_result = $this->admin_api->upload_case_preview();
+		if (is_ok_result($api_result)) {
+			$api_result['data'] = base_url('admin/case');
+		}
+		echo json_encode($api_result);
+    }
+    
+    public function del_case_ajax() {
+        $this->check_state_api('POST');
+
+		// 获取所有的数据
+		$id = $this->input->get_post('cid', TRUE);
+		$this->load->api('case_api');
+		$api_result = $this->case_api->case_del($id);
+		if (is_ok_result($api_result)) {
+		    $currentpage = intval($this->input->get_post('currentpage', TRUE));
+    		if (!isset($currentpage) || $currentpage <= 0) {
+    			$currentpage = 1;
+    		}
+			$api_result['data'] = base_url('admin/case?currentpage=' . $currentpage);
 		}
 		echo json_encode($api_result);
     }
@@ -141,7 +182,8 @@ class Admin extends MY_Controller {
 		// 获取所有的数据
 		$post = $this->input->post(NULL, TRUE);
 		
-		$api_result = NULL;
+        $this->load->api('admin_api');
+		$api_result = $this->admin_api->update_website_info($post);
 		if (is_ok_result($api_result)) {
 			$api_result['data'] = base_url('admin/website_info');
 		}

@@ -12,6 +12,7 @@ DROP TABLE IF EXISTS `db_dxsj`.`tab_website_info` ;
 
 CREATE TABLE IF NOT EXISTS `db_dxsj`.`tab_website_info` (
   `domain` VARCHAR(50) NOT NULL,
+  `com_name` VARCHAR(100) NULL COMMENT '公司全称',
   `website_name` VARCHAR(100) NULL,
   `com_address` VARCHAR(200) NULL,
   `com_postcode` VARCHAR(20) NULL,

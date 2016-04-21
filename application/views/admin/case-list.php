@@ -65,7 +65,7 @@
         <script type="text/javascript">
         function delCase(cid) {
             var r = confirm('确认删除案例？');
-    		if (r === true)    simplePost('admin/del_case/ajax', 'id=' + cid);
+    		if (r === true)    simplePost('admin/del_case/ajax', 'cid=' + cid<?php isset($pagearr) ? print_r(" + '&currentpage=" . $pagearr['currentpage'] . "'") : print_r(''); ?>);
     		else               return false;
         }
         </script>

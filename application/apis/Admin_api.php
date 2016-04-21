@@ -18,6 +18,13 @@ class Admin_api extends API {
 		
 		90006 => '修改密码失败',
 
+
+        20000 => '没有更新项',
+        20001 => '更新失败',
+        
+        30000 => '上传装饰图失败',
+        30001 => '上传预览图失败',
+        30002 => '不合法的操作',
 	);
 
 	public function __construct() {
@@ -67,6 +74,18 @@ class Admin_api extends API {
 		return $this->ok(prepare_user_info($user_after_update));
 	}
 	
+	public function update_website_info($fields) {
+	    $this->load->model('website_info_model');
+	    if (empty($fields)) {
+	        return $this->ex(20000);
+	    }
+        $update_result = $this->website_info_model->update_info($fields);
+        if (!$update_result) {
+			return $this->ex(20001);
+		}
+		return $this->ok();
+	}
+	
 	public function logout() {
 		$this->load_sessionaccess();
 	    clear_login();
@@ -82,6 +101,131 @@ class Admin_api extends API {
 			'salt' => $salt
 		);
 	}
+	
+	
+	// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	// 上传案例相关
+	public function upload_case_subs($reset = FALSE) {
+		$this->load_sessionaccess();
+	    if (!is_login()) { return $this->un_login(); }
+	    
+	    $this->load->helper('upload');
+	    if ($reset) {
+	        $this->check_reset_upload_case();
+	    }
+		
+        $content_path = $this->check_case_content_path();
+        
+        $subs_index = get_user_field('case_subs_index');
+        if (empty($subs_index)) {
+            $subs_index = 0;
+            set_user_field('case_subs_index', $subs_index);
+        }
+        
+		$save_result = save_subs($this, $content_path, $subs_index);
+		if (is_ok_result($save_result)) {
+            $subs_index ++;
+            set_user_field('case_subs_index', $subs_index);
+            $this->append_case_subs($save_result['data']);
+			return $this->ok();
+		} else {
+			return $this->ex(30000);
+		}
+	}
+	
+	public function upload_case_preview() {
+	    $this->load_sessionaccess();
+	    if (!is_login()) { return $this->un_login(); }
+	    
+	    $this->load->helper('upload');
+        $content_path = $this->check_case_content_path();
+        $save_result = save_preview($this, $content_path);
+        if (is_ok_result($save_result)) {
+            set_user_field('case_preview', $save_result['data']);
+			return $this->ok();
+		} else {
+			return $this->ex(30000);
+		}
+	}
+	
+	public function add_case($title) {
+	    $this->load_sessionaccess();
+		
+	    if (!is_login()) { return $this->un_login(); }
+	    
+	    $content_path = get_user_field('case_content_path');
+        if (empty($content_path)) {
+            return $this->ex(30002);
+        }
+        $subs_index = get_user_field('case_subs_index');
+        if (empty($subs_index)) {
+            return $this->ex(30002);
+        }
+        $case_subs_list = get_user_field('case_subs_list');
+	    if (empty($case_subs_list)) {
+            return $this->ex(30002);
+	    }
+	    $case_subs_list = explode(',', $case_subs_list);
+	    
+	    $this->load->helper('upload');
+        $save_result = save_content($this, $content_path, $case_subs_list);
+        if (!is_ok_result($save_result)) {
+            return $this->ex(30002);
+        }
+	    
+        $preview = get_user_field('case_preview');
+        if (empty($preview)) {
+            $preview = 'subs/' . $case_subs_list[0];
+        }
+        
+        $ret = array('title' => $title, 'content_path' => $content_path, 'preview' => $preview);
+        // print_r($ret);
+        // return $this->ex(30002);
+        $this->load->api('case_api');
+        $api_result = $this->case_api->case_add($ret);
+        if (is_ok_result($api_result)) {
+            save_success_flag($this, $content_path);
+            $this->reset_upload_case();
+        }
+        return common_result_ok();
+	}
+	
+	private function append_case_subs($file) {
+	    $case_subs_list = get_user_field('case_subs_list');
+	    if (empty($case_subs_list)) {
+            $case_subs_list = $file;
+        } else {
+            $case_subs_list = $case_subs_list. ','. $file;
+        }
+        set_user_field('case_subs_list', $case_subs_list);
+	}
+	
+	private function check_case_content_path() {
+        $content_path = get_user_field('case_content_path');
+        if (empty($content_path)) {
+            $content_path = generate_content_path($this);
+            set_user_field('case_content_path', $content_path);
+        }
+        return $content_path;
+	}
+	
+	private function check_reset_upload_case() {
+	    $this->load_sessionaccess();
+	    $content_path = get_user_field('case_content_path');
+        if (!empty($content_path)) {
+            del_case_content_path($this, $content_path);
+        }
+        $this->reset_upload_case();
+	}
+	
+	private function reset_upload_case() {
+		$this->load_sessionaccess();
+	    set_user_field('case_content_path', NULL);
+	    set_user_field('case_subs_index', NULL);
+	    set_user_field('case_preview', NULL);
+	    set_user_field('case_subs_list', NULL);
+	}
+	
 }
 
 

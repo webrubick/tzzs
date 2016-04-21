@@ -20,6 +20,7 @@ class MY_Controller extends CI_Controller {
         
         $this->load->model('website_info_model');
         $this->website = $this->website_info_model->get_info();
+        // print_r($this->website);
         $this->website['website_logo_small'] = 'public/img/logo_200x225.png';
         $this->website['website_logo_middle'] = 'public/img/logo_200x225.png';
         // $this->website = array(

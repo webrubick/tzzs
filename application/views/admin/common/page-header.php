@@ -2,7 +2,7 @@
     body { position: relative; text-align: center; }
     .main {
         margin: 0 auto; position: relative;
-        max-width: 850px; height: 100%;
+        max-width: 850px; min-width: 850px; height: 100%;
     }
     .top-btm {
        background: #00bcd4; color: #fff; height: 100px; line-height: 100px;  
