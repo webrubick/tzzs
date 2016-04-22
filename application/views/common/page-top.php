@@ -11,6 +11,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <meta name="Author" content="YY" />
         <meta name="Copyright" content="YY" />
         
+        <?php echo meta('keywords', $website['com_keywords']); ?>
+	    <?php echo meta('description', $website['com_description']); ?>
+	    <link rel="shortcut icon" href="public/favicon.ico">
+        
         <link href="public/css/normalize.css" rel="stylesheet" type="text/css">
         <link href="public/css/common.css" rel="stylesheet" type="text/css">
         

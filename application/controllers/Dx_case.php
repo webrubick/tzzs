@@ -7,6 +7,11 @@ class Dx_case extends MY_Controller {
 		parent::__construct();
     }
     
+    /**
+     * 案例列表页面；
+     * 
+     * 根据currentpage参数，获取一页数据
+     */
     public function case_main() {
 	    $this->set_index_header('case');
 	    
@@ -38,6 +43,9 @@ class Dx_case extends MY_Controller {
 	    $this->load->view('cases/case-main', $this);
     }
 
+    /**
+     * 案例展示页面；
+     */
 	public function by_key($key)
 	{
 	    $this->load->api('case_api');

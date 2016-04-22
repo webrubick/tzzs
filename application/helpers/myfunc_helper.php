@@ -72,4 +72,17 @@ function array_merge_by_key($src, &$target, $filter_keys) {
 	}
 }
 
+/**
+ * 删除文件
+ */
+function del_dir($dir) {
+    $files = array_diff(scandir($dir), array('.', '..'));
+    if (empty($files)) { return TRUE; }
+    foreach ($files as $file) {
+        $path = "$dir/$file";
+        (is_dir($path)) ? del_dir($path) : unlink($path); 
+    } 
+    return rmdir($dir); 
+} 
+
 ?>

@@ -15,7 +15,7 @@
                             <br/>
                             电话：<a href="tel:<?php print_r($website['contact']); ?>"><?php print_r($website['contact']); ?></a> 
                             <br/>
-    	           		    <a href="<?php print_r($website['beian_url']); ?>"><?php print_r($website['beian_no']); ?></a>
+    	           		    <a href="<?php print_r($website['beian_url']); ?>" target="_blank"><?php print_r($website['beian_no']); ?></a>
     	           		</td>
     	           	</tr>
                	</table>

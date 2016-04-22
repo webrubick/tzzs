@@ -127,3 +127,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 # With version 1.8.2 and later of git
 
 **/uploads/caseimg/*
+
+dxzs_session/*
+!dxzs_session/index.html
+!dxzs_session/.htaccess

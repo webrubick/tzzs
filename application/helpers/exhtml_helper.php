@@ -131,4 +131,18 @@ if ( ! function_exists('exlink_tag'))
 	}
 }
 
+
+if ( ! function_exists('to_js_val_str'))
+{
+    function to_js_val_str($raw, $yinhao = "'") {
+        $tmp = str_replace("\n", '\n', $raw);
+        if ($yinhao == "'") {
+            $tmp = str_replace("'", '\\\'', $tmp);
+        } else {
+            $tmp = str_replace('"', '\"', $tmp);
+        }
+        return $tmp;
+    }
+}
+
 ?>

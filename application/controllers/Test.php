@@ -24,8 +24,7 @@ class Test extends MY_Controller {
 	 */
 	public function index()
 	{
-	    $this->load->model('case_model');
-	    print_r($this->case_model->del_by_id(1));
+	    echo date('Ymd', time());
 	}
 	
 	
